@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CEDD05FDD372244ED41F9F8 /* Pods_HyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAC1F202862FAC43345162D /* Pods_HyApp.framework */; };
+		FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C711F220B47D7009CB8BD /* APIManager.swift */; };
+		FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7121220B4B33009CB8BD /* API_URL.swift */; };
 		FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA535220599DE00289D79 /* AppDelegate.swift */; };
-		FCFBA538220599DE00289D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA537220599DE00289D79 /* ViewController.swift */; };
+		FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA537220599DE00289D79 /* LoginVC.swift */; };
 		FCFBA53B220599DE00289D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFBA539220599DE00289D79 /* Main.storyboard */; };
 		FCFBA53D220599DF00289D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFBA53C220599DF00289D79 /* Assets.xcassets */; };
 		FCFBA540220599DF00289D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFBA53E220599DF00289D79 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60277B81EC289BAB4B1A4A88 /* Pods-HyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyApp/Pods-HyApp.release.xcconfig"; sourceTree = "<group>"; };
+		6DAC1F202862FAC43345162D /* Pods_HyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7115A237FCDFF53C5388B8A /* Pods-HyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyApp/Pods-HyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FC3C711F220B47D7009CB8BD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		FC3C7121220B4B33009CB8BD /* API_URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_URL.swift; sourceTree = "<group>"; };
 		FCFBA532220599DE00289D79 /* HyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFBA535220599DE00289D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCFBA537220599DE00289D79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCFBA537220599DE00289D79 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FCFBA53A220599DE00289D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCFBA53C220599DF00289D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFBA53F220599DF00289D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEDD05FDD372244ED41F9F8 /* Pods_HyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		439B91753F43780C5F799100 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7115A237FCDFF53C5388B8A /* Pods-HyApp.debug.xcconfig */,
+				60277B81EC289BAB4B1A4A88 /* Pods-HyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52893FCDF0EE700A8533B317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DAC1F202862FAC43345162D /* Pods_HyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FCFBA529220599DE00289D79 = {
 			isa = PBXGroup;
 			children = (
 				FCFBA534220599DE00289D79 /* HyApp */,
 				FCFBA533220599DE00289D79 /* Products */,
+				439B91753F43780C5F799100 /* Pods */,
+				52893FCDF0EE700A8533B317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				FCFBA535220599DE00289D79 /* AppDelegate.swift */,
-				FCFBA537220599DE00289D79 /* ViewController.swift */,
+				FC3C711F220B47D7009CB8BD /* APIManager.swift */,
+				FC3C7121220B4B33009CB8BD /* API_URL.swift */,
+				FCFBA537220599DE00289D79 /* LoginVC.swift */,
 				FCFBA539220599DE00289D79 /* Main.storyboard */,
 				FCFBA53C220599DF00289D79 /* Assets.xcassets */,
 				FCFBA53E220599DF00289D79 /* LaunchScreen.storyboard */,
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCFBA544220599DF00289D79 /* Build configuration list for PBXNativeTarget "HyApp" */;
 			buildPhases = (
+				1B1F2910F675FC075A553C88 /* [CP] Check Pods Manifest.lock */,
 				FCFBA52E220599DE00289D79 /* Sources */,
 				FCFBA52F220599DE00289D79 /* Frameworks */,
 				FCFBA530220599DE00289D79 /* Resources */,
+				414F37D5635B1F97FF4DDA5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +162,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B1F2910F675FC075A553C88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		414F37D5635B1F97FF4DDA5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HyApp/Pods-HyApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HyApp/Pods-HyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCFBA52E220599DE00289D79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCFBA538220599DE00289D79 /* ViewController.swift in Sources */,
+				FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */,
+				FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */,
+				FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */,
 				FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +365,13 @@
 		};
 		FCFBA545220599DF00289D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7115A237FCDFF53C5388B8A /* Pods-HyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 284Y9W6F8Y;
 				INFOPLIST_FILE = HyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +385,13 @@
 		};
 		FCFBA546220599DF00289D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60277B81EC289BAB4B1A4A88 /* Pods-HyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 284Y9W6F8Y;
 				INFOPLIST_FILE = HyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
