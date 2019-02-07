@@ -10,6 +10,9 @@
 		8CEDD05FDD372244ED41F9F8 /* Pods_HyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAC1F202862FAC43345162D /* Pods_HyApp.framework */; };
 		FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C711F220B47D7009CB8BD /* APIManager.swift */; };
 		FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7121220B4B33009CB8BD /* API_URL.swift */; };
+		FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7124220BD49F009CB8BD /* UserModel.swift */; };
+		FC3C7127220BDFF8009CB8BD /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3C7126220BDFF8009CB8BD /* LoginView.xib */; };
+		FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7128220BEE49009CB8BD /* LoginView.swift */; };
 		FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA535220599DE00289D79 /* AppDelegate.swift */; };
 		FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA537220599DE00289D79 /* LoginVC.swift */; };
 		FCFBA53B220599DE00289D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFBA539220599DE00289D79 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 		D7115A237FCDFF53C5388B8A /* Pods-HyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyApp/Pods-HyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C711F220B47D7009CB8BD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FC3C7121220B4B33009CB8BD /* API_URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_URL.swift; sourceTree = "<group>"; };
+		FC3C7124220BD49F009CB8BD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FC3C7126220BDFF8009CB8BD /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		FC3C7128220BEE49009CB8BD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FCFBA532220599DE00289D79 /* HyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFBA535220599DE00289D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFBA537220599DE00289D79 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -61,6 +67,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC3C7123220BD472009CB8BD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C711F220B47D7009CB8BD /* APIManager.swift */,
+				FC3C7121220B4B33009CB8BD /* API_URL.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		FC3C712A220BEE5A009CB8BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C7128220BEE49009CB8BD /* LoginView.swift */,
+				FC3C7126220BDFF8009CB8BD /* LoginView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		FCFBA529220599DE00289D79 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +107,14 @@
 			isa = PBXGroup;
 			children = (
 				FCFBA535220599DE00289D79 /* AppDelegate.swift */,
-				FC3C711F220B47D7009CB8BD /* APIManager.swift */,
-				FC3C7121220B4B33009CB8BD /* API_URL.swift */,
 				FCFBA537220599DE00289D79 /* LoginVC.swift */,
 				FCFBA539220599DE00289D79 /* Main.storyboard */,
 				FCFBA53C220599DF00289D79 /* Assets.xcassets */,
 				FCFBA53E220599DF00289D79 /* LaunchScreen.storyboard */,
 				FCFBA541220599DF00289D79 /* Info.plist */,
+				FC3C7124220BD49F009CB8BD /* UserModel.swift */,
+				FC3C712A220BEE5A009CB8BD /* View */,
+				FC3C7123220BD472009CB8BD /* Helper */,
 			);
 			path = HyApp;
 			sourceTree = "<group>";
@@ -156,6 +181,7 @@
 			files = (
 				FCFBA540220599DF00289D79 /* LaunchScreen.storyboard in Resources */,
 				FCFBA53D220599DF00289D79 /* Assets.xcassets in Resources */,
+				FC3C7127220BDFF8009CB8BD /* LoginView.xib in Resources */,
 				FCFBA53B220599DE00289D79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,9 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */,
 				FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */,
 				FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */,
 				FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */,
+				FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */,
 				FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
