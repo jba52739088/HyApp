@@ -16,6 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljk-nF-R37">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVR-g1-Lpm">
                     <rect key="frame" x="19" y="183.5" width="337.5" height="300"/>
                     <subviews>
@@ -53,7 +57,7 @@
                                             <rect key="frame" x="10" y="2.5" width="317.5" height="50"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,9 +77,12 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-up-1Xk">
                                                     <rect key="frame" x="0.0" y="0.0" width="163.5" height="31.5"/>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-yH-gPx">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-yH-gPx">
                                                             <rect key="frame" x="109.5" y="0.5" width="51" height="31"/>
                                                             <color key="onTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="tapSwitch:" destination="iN0-l3-epB" eventType="valueChanged" id="Wmc-Rn-XAQ"/>
+                                                            </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記住ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXt-10-bNi">
                                                             <rect key="frame" x="3" y="0.0" width="51" height="31.5"/>
@@ -97,9 +104,12 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iou-hp-iRE">
                                                     <rect key="frame" x="163.5" y="0.0" width="164" height="31.5"/>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZY-bP-IwK">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LZY-bP-IwK">
                                                             <rect key="frame" x="110" y="0.5" width="51" height="31"/>
                                                             <color key="onTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="tapSwitch:" destination="iN0-l3-epB" eventType="valueChanged" id="pyj-ux-Att"/>
+                                                            </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顯示密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c08-2r-pGN">
                                                             <rect key="frame" x="3" y="0.0" width="69.5" height="31.5"/>
@@ -150,6 +160,9 @@
                                             <state key="normal" title="登入">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="doLogin:" destination="iN0-l3-epB" eventType="touchUpInside" id="nqW-Im-IZh"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,6 +183,9 @@
                                             <state key="normal" title="取消">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="doCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="fzE-uT-RQT"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -198,10 +214,14 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Ljk-nF-R37" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="4Eq-J9-QCS"/>
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5QO-lg-Py6"/>
+                <constraint firstItem="Ljk-nF-R37" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7Ip-br-mPv"/>
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mle-Oh-RBb"/>
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="UOY-eO-4Zw"/>
+                <constraint firstItem="Ljk-nF-R37" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="WUt-pL-T2l"/>
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.45" id="ZUy-Kz-Cqh"/>
+                <constraint firstItem="Ljk-nF-R37" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lYf-eG-7hO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -211,6 +231,7 @@
                 <outlet property="idSwitch" destination="Vz8-yH-gPx" id="fOk-fh-FYs"/>
                 <outlet property="loginBtn" destination="wMw-EG-2BI" id="sG8-Sk-q9S"/>
                 <outlet property="pwdField" destination="Qwg-VR-9DT" id="slD-cY-RMq"/>
+                <outlet property="tapView" destination="Ljk-nF-R37" id="Zla-jx-lJc"/>
             </connections>
             <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
         </view>
