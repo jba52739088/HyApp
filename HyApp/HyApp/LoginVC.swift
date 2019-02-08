@@ -22,8 +22,7 @@ class LoginVC: UIViewController {
     
     @objc func showLoginView() {
         if loginView != nil {
-            loginView.removeFromSuperview()
-            loginView = nil
+            self.closeLoginView()
         }else {
             loginView = Bundle.main.loadNibNamed("LoginView", owner: self, options: nil)?.first as! LoginView
             loginView.delegate = self
@@ -59,6 +58,12 @@ class LoginVC: UIViewController {
         }
     }
 
+    func closeLoginView() {
+        if loginView != nil {
+            loginView.removeFromSuperview()
+            loginView = nil
+        }
+    }
 
 }
 
@@ -74,6 +79,7 @@ extension LoginVC: LoginViewDelegate {
     }
     
     func tapLogin(acc: String, pwd: String) {
+        self.closeLoginView()
         if UserDefaultsKeys.REMEBER {
             UserDefaults.standard.set(acc, forKey: HY_ACCOUNT)
             UserDefaults.standard.set(pwd, forKey: HY_PASSWORD)
@@ -83,18 +89,27 @@ extension LoginVC: LoginViewDelegate {
             UserDefaults.standard.set("", forKey: HY_PASSWORD)
             UserDefaults.standard.synchronize()
         }
+        let alert = UIAlertController(title: nil, message: "登入作業進行中...", preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating();
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
         APIManager.shared.login(account: acc, password: pwd) { ( isSucceed, msg) in
+            alert.dismiss(animated: true, completion: nil)
             if isSucceed {
                 print(thisUser?.account)
+            }else {
+                let alert = UIAlertController(title: nil, message: "驗證失敗，無法登入", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "確認", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
     
     func tapCancel() {
-        if loginView != nil {
-            loginView.removeFromSuperview()
-            loginView = nil
-        }
+        self.closeLoginView()
     }
     
     
