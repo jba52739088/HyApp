@@ -19,7 +19,7 @@ class APIManager {
     
     static private var _shared: APIManager?
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private var dataUrl = ""
+    var dataUrl = ""
     
     static var shared: APIManager! {
         if _shared == nil {

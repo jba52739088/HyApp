@@ -100,6 +100,9 @@ extension LoginVC: LoginViewDelegate {
             alert.dismiss(animated: true, completion: nil)
             if isSucceed {
                 print(thisUser?.account)
+                let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "nav") as! UINavigationController
+//                let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+                self.present(tabVC, animated: true, completion: nil)
             }else {
                 let alert = UIAlertController(title: nil, message: "驗證失敗，無法登入", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "確認", style: .default, handler: nil))
