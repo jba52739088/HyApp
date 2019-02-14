@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8CEDD05FDD372244ED41F9F8 /* Pods_HyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAC1F202862FAC43345162D /* Pods_HyApp.framework */; };
+		FC11D1A72211C68A0046554A /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11D1A62211C68A0046554A /* CustomerModel.swift */; };
+		FC11D1AA221470C20046554A /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11D1A9221470C20046554A /* EmployeeModel.swift */; };
+		FC11D1AC221478140046554A /* SupplierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11D1AB221478140046554A /* SupplierModel.swift */; };
 		FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C711F220B47D7009CB8BD /* APIManager.swift */; };
 		FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7121220B4B33009CB8BD /* API_URL.swift */; };
 		FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7124220BD49F009CB8BD /* UserModel.swift */; };
@@ -15,6 +18,9 @@
 		FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7128220BEE49009CB8BD /* LoginView.swift */; };
 		FC3C712C220D5033009CB8BD /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */; };
 		FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712D220D8F66009CB8BD /* TabBarVC.swift */; };
+		FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA622107215008513F2 /* ContactListVC.swift */; };
+		FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA822108451008513F2 /* ContactListCell.swift */; };
+		FCED7EAB22108451008513F2 /* ContactListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCED7EA922108451008513F2 /* ContactListCell.xib */; };
 		FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA535220599DE00289D79 /* AppDelegate.swift */; };
 		FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBA537220599DE00289D79 /* LoginVC.swift */; };
 		FCFBA53B220599DE00289D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFBA539220599DE00289D79 /* Main.storyboard */; };
@@ -26,6 +32,9 @@
 		60277B81EC289BAB4B1A4A88 /* Pods-HyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyApp/Pods-HyApp.release.xcconfig"; sourceTree = "<group>"; };
 		6DAC1F202862FAC43345162D /* Pods_HyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7115A237FCDFF53C5388B8A /* Pods-HyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyApp/Pods-HyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FC11D1A62211C68A0046554A /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
+		FC11D1A9221470C20046554A /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
+		FC11D1AB221478140046554A /* SupplierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierModel.swift; sourceTree = "<group>"; };
 		FC3C711F220B47D7009CB8BD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FC3C7121220B4B33009CB8BD /* API_URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_URL.swift; sourceTree = "<group>"; };
 		FC3C7124220BD49F009CB8BD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -33,6 +42,9 @@
 		FC3C7128220BEE49009CB8BD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		FC3C712D220D8F66009CB8BD /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		FCED7EA622107215008513F2 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		FCED7EA822108451008513F2 /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
+		FCED7EA922108451008513F2 /* ContactListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListCell.xib; sourceTree = "<group>"; };
 		FCFBA532220599DE00289D79 /* HyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFBA535220599DE00289D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFBA537220599DE00289D79 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -71,6 +83,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC11D1A82214708E0046554A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC3C7124220BD49F009CB8BD /* UserModel.swift */,
+				FC11D1A62211C68A0046554A /* CustomerModel.swift */,
+				FC11D1A9221470C20046554A /* EmployeeModel.swift */,
+				FC11D1AB221478140046554A /* SupplierModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FC3C7123220BD472009CB8BD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +109,8 @@
 			children = (
 				FC3C7128220BEE49009CB8BD /* LoginView.swift */,
 				FC3C7126220BDFF8009CB8BD /* LoginView.xib */,
+				FCED7EA822108451008513F2 /* ContactListCell.swift */,
+				FCED7EA922108451008513F2 /* ContactListCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -116,9 +141,10 @@
 				FCFBA535220599DE00289D79 /* AppDelegate.swift */,
 				FCFBA537220599DE00289D79 /* LoginVC.swift */,
 				FC3C712D220D8F66009CB8BD /* TabBarVC.swift */,
+				FCED7EA622107215008513F2 /* ContactListVC.swift */,
 				FCFBA53C220599DF00289D79 /* Assets.xcassets */,
 				FCFBA541220599DF00289D79 /* Info.plist */,
-				FC3C7124220BD49F009CB8BD /* UserModel.swift */,
+				FC11D1A82214708E0046554A /* Model */,
 				FC3C712A220BEE5A009CB8BD /* View */,
 				FC3C7123220BD472009CB8BD /* Helper */,
 			);
@@ -185,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCED7EAB22108451008513F2 /* ContactListCell.xib in Resources */,
 				FCFBA540220599DF00289D79 /* LaunchScreen.storyboard in Resources */,
 				FCFBA53D220599DF00289D79 /* Assets.xcassets in Resources */,
 				FC3C7127220BDFF8009CB8BD /* LoginView.xib in Resources */,
@@ -252,9 +279,14 @@
 			files = (
 				FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */,
 				FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */,
+				FC11D1A72211C68A0046554A /* CustomerModel.swift in Sources */,
+				FC11D1AA221470C20046554A /* EmployeeModel.swift in Sources */,
 				FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */,
 				FC3C712C220D5033009CB8BD /* UserDefaultsKey.swift in Sources */,
+				FC11D1AC221478140046554A /* SupplierModel.swift in Sources */,
 				FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */,
+				FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */,
+				FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */,
 				FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */,
 				FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */,
 				FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */,

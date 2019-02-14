@@ -13,7 +13,7 @@ import UIKit
 class TabBarVC: UITabBarController {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
+    var freshLaunch = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,15 @@ class TabBarVC: UITabBarController {
                 tabBarItem.title = ""
                 tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
             }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if freshLaunch == true {
+            freshLaunch = false
+            self.selectedIndex = 1
+            self.title = "聯絡人"
         }
     }
     

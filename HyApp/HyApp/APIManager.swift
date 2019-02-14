@@ -72,7 +72,7 @@ class APIManager {
 }
 
 /// 取顧客
-func getCustomer(completionHandler: @escaping (_ status: Bool, _ data: [String : AnyObject]?) -> Void){
+func getCustomer(completionHandler: @escaping (_ status: Bool, _ data: [Customer]?) -> Void){
     //        if dataUrl == "" { return }
     Alamofire.request(dataUrl + GET_CUSTOMER, method: .post, encoding: URLEncoding.httpBody)
         .downloadProgress { progress in
@@ -81,9 +81,39 @@ func getCustomer(completionHandler: @escaping (_ status: Bool, _ data: [String :
         }
         .responseJSON { response in
             if let JSON = response.result.value as? [[String:AnyObject]] {
+                var customers: [Customer] = []
                 for item in JSON {
-                    print("item: \(item)")
+                    let customer = Customer(id: item["id"] as? String ?? "",
+                                             boss: item["id"] as? String ?? "",
+                                             custabbr: item["id"] as? String ?? "",
+                                             custno: item["id"] as? String ?? "",
+                                             empno: item["id"] as? String ?? "",
+                                             compaddr: item["id"] as? String ?? "",
+                                             sendaddr: item["id"] as? String ?? "",
+                                             email: item["id"] as? String ?? "",
+                                             tel1: item["id"] as? String ?? "",
+                                             fax: item["id"] as? String ?? "",
+                                             tel2: item["id"] as? String ?? "",
+                                             bbc: item["id"] as? String ?? "",
+                                             con1: item["id"] as? String ?? "",
+                                             con2: item["id"] as? String ?? "",
+                                             acttel1: item["id"] as? String ?? "",
+                                             acttel2: item["id"] as? String ?? "",
+                                             uniform: item["id"] as? String ?? "",
+                                             ckindno: item["id"] as? String ?? "",
+                                             areano: item["id"] as? String ?? "",
+                                             iksno: item["iksno"] as? String ?? "",
+                                             acustno: item["acustno"] as? String ?? "",
+                                             icustno: item["icustno"] as? String ?? "",
+                                             accday: item["accday"] as? String ?? "",
+                                             trust: item["trust"] as? String ?? "",
+                                             memo: item["memo"] as? String ?? "",
+                                             prercv: item["prercv"] as? String ?? "",
+                                             appedate2: item["appedate2"] as? String ?? "")
+                    customers.append(customer)
+                    print("item: \(customer.custabbr)")
                 }
+                completionHandler(true, customers)
             }else {
                 print("getSupplier: get JSON error")
                 completionHandler(false, nil)
