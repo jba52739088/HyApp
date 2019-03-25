@@ -18,6 +18,7 @@
 		FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7128220BEE49009CB8BD /* LoginView.swift */; };
 		FC3C712C220D5033009CB8BD /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */; };
 		FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712D220D8F66009CB8BD /* TabBarVC.swift */; };
+		FCBF7FA4224898B100D2C086 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF7FA3224898B100D2C086 /* SQLiteManager.swift */; };
 		FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA622107215008513F2 /* ContactListVC.swift */; };
 		FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA822108451008513F2 /* ContactListCell.swift */; };
 		FCED7EAB22108451008513F2 /* ContactListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCED7EA922108451008513F2 /* ContactListCell.xib */; };
@@ -42,6 +43,7 @@
 		FC3C7128220BEE49009CB8BD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		FC3C712D220D8F66009CB8BD /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		FCBF7FA3224898B100D2C086 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		FCED7EA622107215008513F2 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		FCED7EA822108451008513F2 /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
 		FCED7EA922108451008513F2 /* ContactListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListCell.xib; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */,
 				FC3C711F220B47D7009CB8BD /* APIManager.swift */,
 				FC3C7121220B4B33009CB8BD /* API_URL.swift */,
+				FCBF7FA3224898B100D2C086 /* SQLiteManager.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HyApp/Pods-HyApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -263,6 +267,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +293,7 @@
 				FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */,
 				FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */,
 				FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */,
+				FCBF7FA4224898B100D2C086 /* SQLiteManager.swift in Sources */,
 				FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */,
 				FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */,
 			);

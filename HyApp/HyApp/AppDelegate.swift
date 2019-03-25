@@ -15,6 +15,8 @@ var thisUser: User?
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    // 判斷是否第一次建立db
+    var isNewApp = false
     
 
 
@@ -26,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         IQKeyboardManager.shared.enableAutoToolbar = false
+        if SQLiteManager.shared.createDatebase() {
+            isNewApp = true
+            print("is first time creating db")
+        }
         return true
     }
 
