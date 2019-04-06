@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HyApp/LoginVC.swift"
-            timestampString = "571510935.3770289"
+            timestampString = "576232906.767953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "showLoginView()"
             landmarkType = "7">
          </BreakpointContent>

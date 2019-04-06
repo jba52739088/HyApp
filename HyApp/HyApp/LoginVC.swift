@@ -11,10 +11,17 @@ import UIKit
 class LoginVC: UIViewController {
     
     @IBOutlet weak var backgroungImg: UIImageView!
+    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    
     var loginView: LoginView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.idLabel.text = appDelegate.uuid
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
+        self.versionLabel.text = "V" + (appVersion ?? "")
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showLoginView))
         self.backgroungImg.addGestureRecognizer(tapGesture)
         self.backgroungImg.isUserInteractionEnabled = true

@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import AdSupport
 
 var thisUser: User?
 
@@ -15,6 +16,7 @@ var thisUser: User?
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var uuid: String?
     // 判斷是否第一次建立db
     var isNewApp = false
     
@@ -32,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             isNewApp = true
             print("is first time creating db")
         }
+        self.getUUID()
+        
         return true
     }
 
@@ -57,6 +61,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func getUUID() {
+        if ((UserDefaultsKeys.UUID != "") && (UserDefaultsKeys.UUID != "00000000-0000-0000-0000-000000000000")) {
+            uuid = UserDefaultsKeys.UUID
+            print("uuid: \(uuid)")
+            return
+        }
+        if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
+            uuid = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+            if (uuid == nil) || (uuid == "") || (uuid == "00000000-0000-0000-0000-000000000000") {
+                uuid = UIDevice.current.identifierForVendor?.uuidString
+            }
+        }else {
+            uuid = UIDevice.current.identifierForVendor?.uuidString
+        }
+        UserDefaults.standard.set(uuid, forKey: HY_UUID)
+        UserDefaults.standard.synchronize()
+        print("uuid: \(uuid)")
+    }
 
 }
 

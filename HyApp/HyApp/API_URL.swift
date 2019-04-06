@@ -9,6 +9,7 @@
 import Foundation
 
 let CK_ACCOUNT = "https://www.bradchao.com/hyb/ckAccount.php"
+let CK_UUID = "https://www.bradchao.com/hyserver/ckUUID.php"
 let GET_CUSTOMER = "getCustomer.php"
 let GET_EMPLOYEE = "getEmployee.php"
 let GET_SUPPLIER = "getSupplier.php"

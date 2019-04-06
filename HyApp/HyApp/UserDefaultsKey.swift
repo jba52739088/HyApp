@@ -8,6 +8,7 @@
 
 import Foundation
 
+let HY_UUID = "###HY_UUID"
 let HY_ACCOUNT = "###HY_ACCOUNT"
 let HY_PASSWORD = "###HY_PASSWORD"
 let HY_REMEBER = "###HY_REMEBER"
@@ -15,6 +16,12 @@ let HY_SHOW = "###HY_SHOW"
 
 
 class UserDefaultsKeys: NSObject {
+    
+    static var UUID:String{
+        get{
+            return UserDefaults.standard.string(forKey: HY_UUID) ?? ""
+        }
+    }
     
     static var ACCOUNT:String{
         get{
