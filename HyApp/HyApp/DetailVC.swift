@@ -17,10 +17,11 @@ class DetailVC: UIViewController {
     // 1. 客戶 2. 廠商 3. 員工
     var dataType: Int = 1
     var data: AnyObject?
+    var isFavirite = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.checkDataInFavorite()
         self.tableView.tableFooterView = UIView()
     }
     
@@ -31,7 +32,34 @@ class DetailVC: UIViewController {
             self.tableView.isHidden = false
         }
     }
-
+    
+    func checkDataInFavorite() {
+        var id = ""
+        var _type = ""
+        switch self.dataType {
+        case 1:
+            guard let aCustomer = self.data as? Customer else { return }
+            id = aCustomer.custno
+            _type = "Customer"
+        case 2:
+            guard let aSupplier = self.data as? Supplier else { return }
+            id = aSupplier.SUPPNO
+            _type = "Supplier"
+        case 3:
+            guard let aEmployee = self.data as? Employee else { return }
+            id = aEmployee.EMPNO
+            _type = "Employee"
+            
+        default:
+            print("checkDataInFavorite failed")
+        }
+        if SQLiteManager.shared.favoriteDataIsExist(id: id, type: _type) {
+            isFavirite = true
+        }else {
+            isFavirite = false
+        }
+    }
+    
 }
 
 
@@ -65,6 +93,12 @@ extension DetailVC: UITableViewDelegate, UITableViewDataSource {
                 cell.lbContent_2.text = aCustomer.custabbr
                 cell.lbContent_3.text = aCustomer.boss
                 cell.lbContent_4.text = aCustomer.empno
+                cell.delegate = self
+                if self.isFavirite {
+                    cell.btnLike.setImage(UIImage(named: "like"), for: .normal)
+                }else {
+                    cell.btnLike.setImage(UIImage(named: "unlike"), for: .normal)
+                }
                 return cell
             case 2:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "twoFieldCell") as! TwoFieldCell
@@ -242,4 +276,40 @@ extension DetailVC: UITableViewDelegate, UITableViewDataSource {
         return 10
     }
     
+}
+
+extension DetailVC: ModifyFavoriteTypeDelegate {
+    func onModifyFavoriteType() {
+        var id = ""
+        var type = ""
+        switch self.dataType {
+        case 1:
+            guard let aCustomer = self.data as? Customer else { return }
+            id = aCustomer.custno
+            type = "Customer"
+        case 2:
+            guard let aSupplier = self.data as? Supplier else { return }
+            id = aSupplier.SUPPNO
+            type = "Supplier"
+        case 3:
+            guard let aEmployee = self.data as? Employee else { return }
+            id = aEmployee.EMPNO
+            type = "Employee"
+        default:
+            print("onModifyFavoriteType type error")
+        }
+        if self.isFavirite {
+            // 刪除最愛
+            if !SQLiteManager.shared.deleteFavoriteInfo(id: id, type: type) {
+                print("deleteFavoriteInfo failed")
+            }
+        }else {
+            // 新增最愛
+            if !SQLiteManager.shared.insertFavoriteInfo(id: id, type: type, no: id) {
+                print("deleteFavoriteInfo failed")
+            }
+        }
+        self.isFavirite = !self.isFavirite
+        self.tableView.reloadData()
+    }
 }

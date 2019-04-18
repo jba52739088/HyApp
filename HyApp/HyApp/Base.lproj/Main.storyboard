@@ -276,6 +276,9 @@
                                                     <rect key="frame" x="5" y="0.0" width="34" height="34"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="unlike"/>
+                                                    <connections>
+                                                        <action selector="onTapButton:" destination="to9-WN-QIe" eventType="touchUpInside" id="YdA-Q6-anw"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-CR-4Th">
                                                     <rect key="frame" x="89.5" y="0.0" width="280.5" height="74.5"/>

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ModifyFavoriteTypeDelegate {
+    func onModifyFavoriteType()
+}
+
 class ImgWithFourFieldCell: UITableViewCell {
     
     @IBOutlet weak var btnLike: UIButton!
@@ -21,6 +25,8 @@ class ImgWithFourFieldCell: UITableViewCell {
     @IBOutlet weak var lbContent_3: UILabel!
     @IBOutlet weak var lbContent_4: UILabel!
     
+    var delegate: ModifyFavoriteTypeDelegate!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,5 +37,9 @@ class ImgWithFourFieldCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func onTapButton(_ sender: Any) {
+        self.delegate.onModifyFavoriteType()
+    }
+    
 }

@@ -749,6 +749,46 @@ class SQLiteManager {
         }
         completionHandler(allSuppliers)
     }
+    
+    func insertFavoriteInfo(id: String, type: String, no: String) -> Bool {
+        do {
+            let insert = favoriteTable.insert(FAV_id <- id,
+                                              FAV_datatype <- type,
+                                              FAV_appno <- no)
+            if try db!.run(insert) > 0 {
+                return true
+            }
+        } catch {
+            print("insertFavoriteInfo error: \(error.localizedDescription)")
+        }
+        return false
+    }
+    
+    func deleteFavoriteInfo(id: String, type: String) -> Bool {
+        do {
+            let select = favoriteTable.filter(FAV_id == id && FAV_datatype == type)
+            let delete = select.delete()
+            if try db!.run(delete) > 0 {
+                return true
+            }
+        } catch {
+            print("deleteFavoriteInfo error: \(error.localizedDescription)")
+        }
+        return false
+    }
+    
+    func favoriteDataIsExist(id: String, type: String) -> Bool {
+        let select = favoriteTable.filter(FAV_id == id)
+        do {
+            let count = try db!.scalar(select.where(FAV_datatype == type).count)
+            if count > 0 {
+                return true
+            }
+        } catch {
+            print("favoriteDataIsExist error")
+        }
+        return false
+    }
 }
 
 
