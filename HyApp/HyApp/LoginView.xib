@@ -23,20 +23,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVR-g1-Lpm">
                     <rect key="frame" x="19" y="183.5" width="337.5" height="300"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-94-fDf">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-94-fDf">
                             <rect key="frame" x="0.0" y="0.0" width="337.5" height="210"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登入" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQa-QI-hDl">
-                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="49"/>
                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDA-A6-DB4">
-                                    <rect key="frame" x="0.0" y="73.5" width="337.5" height="52.5"/>
+                                    <rect key="frame" x="0.0" y="54" width="337.5" height="48.5"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-KK-9zw">
-                                            <rect key="frame" x="10" y="0.0" width="317.5" height="50"/>
+                                            <rect key="frame" x="10" y="0.0" width="317.5" height="46"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -51,10 +51,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-CE-zq9">
-                                    <rect key="frame" x="0.0" y="126" width="337.5" height="52.5"/>
+                                    <rect key="frame" x="0.0" y="107.5" width="337.5" height="49"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwg-VR-9DT">
-                                            <rect key="frame" x="10" y="2.5" width="317.5" height="50"/>
+                                            <rect key="frame" x="10" y="2.5" width="317.5" height="46.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -69,23 +69,23 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFs-Cd-RYW">
-                                    <rect key="frame" x="0.0" y="178.5" width="337.5" height="31.5"/>
+                                    <rect key="frame" x="0.0" y="161.5" width="337.5" height="48.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b8R-15-8v0">
-                                            <rect key="frame" x="5" y="0.0" width="327.5" height="31.5"/>
+                                            <rect key="frame" x="5" y="0.0" width="327.5" height="48.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-up-1Xk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="31.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="48.5"/>
                                                     <subviews>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-yH-gPx">
-                                                            <rect key="frame" x="109.5" y="0.5" width="51" height="31"/>
+                                                            <rect key="frame" x="109.5" y="8.5" width="51" height="31"/>
                                                             <color key="onTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="tapSwitch:" destination="iN0-l3-epB" eventType="valueChanged" id="Wmc-Rn-XAQ"/>
                                                             </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記住ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXt-10-bNi">
-                                                            <rect key="frame" x="3" y="0.0" width="51" height="31.5"/>
+                                                            <rect key="frame" x="3" y="0.0" width="51" height="48.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -102,17 +102,17 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iou-hp-iRE">
-                                                    <rect key="frame" x="163.5" y="0.0" width="164" height="31.5"/>
+                                                    <rect key="frame" x="163.5" y="0.0" width="164" height="48.5"/>
                                                     <subviews>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LZY-bP-IwK">
-                                                            <rect key="frame" x="110" y="0.5" width="51" height="31"/>
+                                                            <rect key="frame" x="110" y="8.5" width="51" height="31"/>
                                                             <color key="onTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="tapSwitch:" destination="iN0-l3-epB" eventType="valueChanged" id="pyj-ux-Att"/>
                                                             </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顯示密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c08-2r-pGN">
-                                                            <rect key="frame" x="3" y="0.0" width="69.5" height="31.5"/>
+                                                            <rect key="frame" x="3" y="0.0" width="69.5" height="48.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -141,10 +141,7 @@
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="dQa-QI-hDl" firstAttribute="height" secondItem="nwH-94-fDf" secondAttribute="height" multiplier="0.35" id="6BJ-nC-ae3"/>
-                                <constraint firstItem="cFs-Cd-RYW" firstAttribute="height" secondItem="nwH-94-fDf" secondAttribute="height" multiplier="0.15" id="IM4-GC-Pqu"/>
-                                <constraint firstItem="HDA-A6-DB4" firstAttribute="height" secondItem="nwH-94-fDf" secondAttribute="height" multiplier="0.25" id="Y8B-H7-XRm"/>
-                                <constraint firstItem="4fq-CE-zq9" firstAttribute="height" secondItem="nwH-94-fDf" secondAttribute="height" multiplier="0.25" id="Zp7-eI-Ytr"/>
+                                <constraint firstAttribute="height" constant="210" id="QP9-pD-jBK"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ziS-2U-mTa">
@@ -205,7 +202,7 @@
                         <constraint firstAttribute="bottom" secondItem="ziS-2U-mTa" secondAttribute="bottom" id="JXj-tj-8Ac"/>
                         <constraint firstItem="ziS-2U-mTa" firstAttribute="leading" secondItem="ZVR-g1-Lpm" secondAttribute="leading" id="T9O-Mo-wUk"/>
                         <constraint firstItem="nwH-94-fDf" firstAttribute="top" secondItem="ZVR-g1-Lpm" secondAttribute="top" id="Uu1-3a-hio"/>
-                        <constraint firstItem="nwH-94-fDf" firstAttribute="height" secondItem="ZVR-g1-Lpm" secondAttribute="height" multiplier="0.7" id="bfe-fQ-4xB"/>
+                        <constraint firstAttribute="height" constant="300" id="bHX-lk-PMC"/>
                         <constraint firstItem="ziS-2U-mTa" firstAttribute="top" secondItem="nwH-94-fDf" secondAttribute="bottom" id="kZi-Pr-z1q"/>
                         <constraint firstAttribute="trailing" secondItem="nwH-94-fDf" secondAttribute="trailing" id="oCb-ed-Gmt"/>
                         <constraint firstItem="nwH-94-fDf" firstAttribute="leading" secondItem="ZVR-g1-Lpm" secondAttribute="leading" id="yJl-H6-dxb"/>
@@ -220,7 +217,6 @@
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mle-Oh-RBb"/>
                 <constraint firstItem="ZVR-g1-Lpm" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="UOY-eO-4Zw"/>
                 <constraint firstItem="Ljk-nF-R37" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="WUt-pL-T2l"/>
-                <constraint firstItem="ZVR-g1-Lpm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.45" id="ZUy-Kz-Cqh"/>
                 <constraint firstItem="Ljk-nF-R37" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lYf-eG-7hO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

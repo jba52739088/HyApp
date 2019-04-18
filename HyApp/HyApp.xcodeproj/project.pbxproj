@@ -18,6 +18,20 @@
 		FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C7128220BEE49009CB8BD /* LoginView.swift */; };
 		FC3C712C220D5033009CB8BD /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */; };
 		FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C712D220D8F66009CB8BD /* TabBarVC.swift */; };
+		FC3DE8FB226775D8004CA721 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE8FA226775D8004CA721 /* FavoriteVC.swift */; };
+		FC3DE8FD226775F8004CA721 /* PhoneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE8FC226775F8004CA721 /* PhoneListVC.swift */; };
+		FC3DE8FF22678EE6004CA721 /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE8FE22678EE6004CA721 /* checkBox.swift */; };
+		FC3DE90122678F43004CA721 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE90022678F43004CA721 /* DetailVC.swift */; };
+		FC3DE9042267920E004CA721 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE9032267920E004CA721 /* NameCell.swift */; };
+		FC3DE906226792FF004CA721 /* ImgWithFourFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE905226792FF004CA721 /* ImgWithFourFieldCell.swift */; };
+		FC3DE908226795CE004CA721 /* TwoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE907226795CE004CA721 /* TwoFieldCell.swift */; };
+		FC3DE90A22679667004CA721 /* ImgWithTwoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE90922679667004CA721 /* ImgWithTwoFieldCell.swift */; };
+		FC3DE90C226796E2004CA721 /* OneFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE90B226796E2004CA721 /* OneFieldCell.swift */; };
+		FC87952E2268D6AC009AEBE2 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87952D2268D6AC009AEBE2 /* SSRadioButton.swift */; };
+		FC8795302268D6CB009AEBE2 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87952F2268D6CB009AEBE2 /* SSRadioButtonsController.swift */; };
+		FC8795342268E5BE009AEBE2 /* SevenBtnsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8795332268E5BE009AEBE2 /* SevenBtnsCell.swift */; };
+		FC8795362268E630009AEBE2 /* FiveBtnsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8795352268E630009AEBE2 /* FiveBtnsCell.swift */; };
+		FC8795382268EBAD009AEBE2 /* ThreeFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8795372268EBAD009AEBE2 /* ThreeFieldCell.swift */; };
 		FCBF7FA4224898B100D2C086 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF7FA3224898B100D2C086 /* SQLiteManager.swift */; };
 		FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA622107215008513F2 /* ContactListVC.swift */; };
 		FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED7EA822108451008513F2 /* ContactListCell.swift */; };
@@ -43,6 +57,20 @@
 		FC3C7128220BEE49009CB8BD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC3C712B220D5033009CB8BD /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		FC3C712D220D8F66009CB8BD /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		FC3DE8FA226775D8004CA721 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		FC3DE8FC226775F8004CA721 /* PhoneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneListVC.swift; sourceTree = "<group>"; };
+		FC3DE8FE22678EE6004CA721 /* checkBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
+		FC3DE90022678F43004CA721 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		FC3DE9032267920E004CA721 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
+		FC3DE905226792FF004CA721 /* ImgWithFourFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgWithFourFieldCell.swift; sourceTree = "<group>"; };
+		FC3DE907226795CE004CA721 /* TwoFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFieldCell.swift; sourceTree = "<group>"; };
+		FC3DE90922679667004CA721 /* ImgWithTwoFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgWithTwoFieldCell.swift; sourceTree = "<group>"; };
+		FC3DE90B226796E2004CA721 /* OneFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFieldCell.swift; sourceTree = "<group>"; };
+		FC87952D2268D6AC009AEBE2 /* SSRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		FC87952F2268D6CB009AEBE2 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		FC8795332268E5BE009AEBE2 /* SevenBtnsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenBtnsCell.swift; sourceTree = "<group>"; };
+		FC8795352268E630009AEBE2 /* FiveBtnsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveBtnsCell.swift; sourceTree = "<group>"; };
+		FC8795372268EBAD009AEBE2 /* ThreeFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeFieldCell.swift; sourceTree = "<group>"; };
 		FCBF7FA3224898B100D2C086 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		FCED7EA622107215008513F2 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		FCED7EA822108451008513F2 /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
@@ -110,12 +138,39 @@
 		FC3C712A220BEE5A009CB8BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC3DE902226791C1004CA721 /* detailCell */,
+				FC87952C2268D689009AEBE2 /* component */,
 				FC3C7128220BEE49009CB8BD /* LoginView.swift */,
 				FC3C7126220BDFF8009CB8BD /* LoginView.xib */,
 				FCED7EA822108451008513F2 /* ContactListCell.swift */,
 				FCED7EA922108451008513F2 /* ContactListCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FC3DE902226791C1004CA721 /* detailCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE9032267920E004CA721 /* NameCell.swift */,
+				FC3DE905226792FF004CA721 /* ImgWithFourFieldCell.swift */,
+				FC3DE907226795CE004CA721 /* TwoFieldCell.swift */,
+				FC3DE90922679667004CA721 /* ImgWithTwoFieldCell.swift */,
+				FC3DE90B226796E2004CA721 /* OneFieldCell.swift */,
+				FC8795332268E5BE009AEBE2 /* SevenBtnsCell.swift */,
+				FC8795352268E630009AEBE2 /* FiveBtnsCell.swift */,
+				FC8795372268EBAD009AEBE2 /* ThreeFieldCell.swift */,
+			);
+			name = detailCell;
+			sourceTree = "<group>";
+		};
+		FC87952C2268D689009AEBE2 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE8FE22678EE6004CA721 /* checkBox.swift */,
+				FC87952D2268D6AC009AEBE2 /* SSRadioButton.swift */,
+				FC87952F2268D6CB009AEBE2 /* SSRadioButtonsController.swift */,
+			);
+			name = component;
 			sourceTree = "<group>";
 		};
 		FCFBA529220599DE00289D79 = {
@@ -145,10 +200,13 @@
 				FCFBA537220599DE00289D79 /* LoginVC.swift */,
 				FC3C712D220D8F66009CB8BD /* TabBarVC.swift */,
 				FCED7EA622107215008513F2 /* ContactListVC.swift */,
+				FC3DE8FA226775D8004CA721 /* FavoriteVC.swift */,
+				FC3DE8FC226775F8004CA721 /* PhoneListVC.swift */,
+				FC3DE90022678F43004CA721 /* DetailVC.swift */,
 				FCFBA53C220599DF00289D79 /* Assets.xcassets */,
 				FCFBA541220599DF00289D79 /* Info.plist */,
-				FC11D1A82214708E0046554A /* Model */,
 				FC3C712A220BEE5A009CB8BD /* View */,
+				FC11D1A82214708E0046554A /* Model */,
 				FC3C7123220BD472009CB8BD /* Helper */,
 			);
 			path = HyApp;
@@ -283,19 +341,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3C7129220BEE49009CB8BD /* LoginView.swift in Sources */,
+				FC8795302268D6CB009AEBE2 /* SSRadioButtonsController.swift in Sources */,
+				FC3DE908226795CE004CA721 /* TwoFieldCell.swift in Sources */,
 				FC3C7122220B4B33009CB8BD /* API_URL.swift in Sources */,
+				FC3DE90A22679667004CA721 /* ImgWithTwoFieldCell.swift in Sources */,
 				FC11D1A72211C68A0046554A /* CustomerModel.swift in Sources */,
 				FC11D1AA221470C20046554A /* EmployeeModel.swift in Sources */,
+				FC3DE8FF22678EE6004CA721 /* checkBox.swift in Sources */,
+				FC3DE9042267920E004CA721 /* NameCell.swift in Sources */,
+				FC3DE906226792FF004CA721 /* ImgWithFourFieldCell.swift in Sources */,
+				FC3DE90122678F43004CA721 /* DetailVC.swift in Sources */,
+				FC3DE8FB226775D8004CA721 /* FavoriteVC.swift in Sources */,
 				FC3C7120220B47D7009CB8BD /* APIManager.swift in Sources */,
+				FC8795362268E630009AEBE2 /* FiveBtnsCell.swift in Sources */,
 				FC3C712C220D5033009CB8BD /* UserDefaultsKey.swift in Sources */,
+				FC8795382268EBAD009AEBE2 /* ThreeFieldCell.swift in Sources */,
 				FC11D1AC221478140046554A /* SupplierModel.swift in Sources */,
+				FC8795342268E5BE009AEBE2 /* SevenBtnsCell.swift in Sources */,
 				FCFBA538220599DE00289D79 /* LoginVC.swift in Sources */,
+				FC3DE90C226796E2004CA721 /* OneFieldCell.swift in Sources */,
 				FCED7EA722107215008513F2 /* ContactListVC.swift in Sources */,
 				FCED7EAA22108451008513F2 /* ContactListCell.swift in Sources */,
+				FC3DE8FD226775F8004CA721 /* PhoneListVC.swift in Sources */,
 				FC3C7125220BD49F009CB8BD /* UserModel.swift in Sources */,
 				FCBF7FA4224898B100D2C086 /* SQLiteManager.swift in Sources */,
 				FC3C712E220D8F66009CB8BD /* TabBarVC.swift in Sources */,
 				FCFBA536220599DE00289D79 /* AppDelegate.swift in Sources */,
+				FC87952E2268D6AC009AEBE2 /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

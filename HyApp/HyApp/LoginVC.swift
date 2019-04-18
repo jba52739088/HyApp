@@ -14,23 +14,41 @@ class LoginVC: UIViewController {
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var loginView: LoginView!
+    var crashText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         self.idLabel.text = appDelegate.uuid
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
         self.versionLabel.text = "V" + (appVersion ?? "")
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showLoginView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.didTapBackGroundView))
         self.backgroungImg.addGestureRecognizer(tapGesture)
         self.backgroungImg.isUserInteractionEnabled = true
+    }
+    
+    @objc func didTapBackGroundView() {
+        APIManager.shared.checkUUID(uuid: self.appDelegate.uuid ?? "") { (isSucceed, errorMsg) in
+            if isSucceed {
+                self.showLoginView()
+            }else {
+                print("errorMsg: \(errorMsg)")
+                let alert = UIAlertController(title: nil, message: "目前裝置停用本軟體中", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                    self.idLabel.text = self.crashText!
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @objc func showLoginView() {
         if loginView != nil {
             self.closeLoginView()
         }else {
+            
             loginView = Bundle.main.loadNibNamed("LoginView", owner: self, options: nil)?.first as! LoginView
             loginView.delegate = self
             loginView.frame = self.view.frame
@@ -104,17 +122,23 @@ extension LoginVC: LoginViewDelegate {
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
         APIManager.shared.login(account: acc, password: pwd) { ( isSucceed, msg) in
-            alert.dismiss(animated: true, completion: nil)
-            if isSucceed {
-                print(thisUser?.account)
-                let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "nav") as! UINavigationController
-//                let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-                self.present(tabVC, animated: true, completion: nil)
-            }else {
-                let alert = UIAlertController(title: nil, message: "驗證失敗，無法登入", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "確認", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
+            alert.dismiss(animated: true, completion: {
+                if isSucceed {
+                    APIManager.shared.getDataUrl(completionHandler: { (succeed, _msg) in
+                        if succeed {
+                            print("account: \(thisUser?.account ?? "")")
+                            let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "nav") as! UINavigationController
+                            self.present(tabVC, animated: true, completion: nil)
+                        }else {
+                            
+                        }
+                    })
+                }else {
+                    let alert = UIAlertController(title: nil, message: "驗證失敗，無法登入", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "確認", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            })
         }
     }
     

@@ -47,6 +47,8 @@ class TabBarVC: UITabBarController {
 //        let statusHeight = UIApplication.shared.statusBarFrame.height
         let statusHeight: CGFloat = 0
         tabBar.frame = CGRect(x: 0,y: navHeight + statusHeight, width: UIScreen.main.bounds.width, height: 50)
+        self.view.frame = CGRect(x: 0, y: navHeight + 50, width: self.view.frame.width, height: self.view.frame.height)
+        
     }
 
     
@@ -74,8 +76,9 @@ class TabBarVC: UITabBarController {
     
     @objc func didTapMoreButton() {
         let alertSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let setting = UIAlertAction(title: "設定資料來源", style: .default) { (_) in
-            let alert = UIAlertController(title: "設定資料來源", message: nil, preferredStyle: .alert)
+        // 設定遠端資料來源
+        let setting = UIAlertAction(title: "設定遠端資料來源", style: .default) { (_) in
+            let alert = UIAlertController(title: "檢視資料來源", message: nil, preferredStyle: .alert)
             alert.addTextField { (textField) in
                 textField.text = APIManager.shared.dataUrl
             }
@@ -87,7 +90,68 @@ class TabBarVC: UITabBarController {
             alert.addAction(UIAlertAction(title: "取消", style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        // 更新資料集
+        let update = UIAlertAction(title: "更新資料集", style: .default) { (_) in
+            APIManager.shared.getCustomer { (isSucceed, _cusData) in
+                if isSucceed {
+                    if SQLiteManager.shared.cleanCustomTable() { print("cleanCustomTable成功  ") }
+                        guard let datas = _cusData else { print("更新Customer失敗"); return }
+                        var succeedCount = 0
+                        var failedCount = 0
+                        for data in datas {
+                            if SQLiteManager.shared.insertCustomInfo(data) {
+                                succeedCount += 1
+                                print("更新Customer成功\(succeedCount)")
+                            }else {
+                                failedCount += 1
+                                print("更新Customerd失敗\(failedCount)")
+                            }
+                        }
+                }
+            }
+            APIManager.shared.getEmployee { (isSucceed, _empData) in
+                if isSucceed {
+                    if SQLiteManager.shared.cleanEmployeeTable() { print("cleanEmployeeTable成功") }
+                        guard let datas = _empData else { print("更新Employee失敗"); return }
+                        var succeedCount = 0
+                        var failedCount = 0
+                        for data in datas {
+                            if SQLiteManager.shared.insertEmployeeInfo(data) {
+                                succeedCount += 1
+                                print("更新Employee成功\(succeedCount)")
+                            }else {
+                                failedCount += 1
+                                print("更新Employee失敗\(failedCount)")
+                            }
+                        }
+                }
+            }
+            APIManager.shared.getSupplier { (isSucceed, _supData) in
+                if isSucceed {
+                    if SQLiteManager.shared.cleanSupplierTable() { print("cleanSupplierTable成功") }
+                        guard let datas = _supData else { print("更新Supplier失敗"); return }
+                        var succeedCount = 0
+                        var failedCount = 0
+                        for data in datas {
+                            if SQLiteManager.shared.insertSupplierInfo(data) {
+                                succeedCount += 1
+                                print("更新Supplier成功\(succeedCount)")
+                            }else {
+                                failedCount += 1
+                                print("更新Supplier失敗\(failedCount)")
+                            }
+                        }
+                }
+            }
+        }
+        // 排序資料集
+        let sort = UIAlertAction(title: "排序資料集", style: .default) { (_) in
+            
+        }
+        
         alertSheet.addAction(setting)
+        alertSheet.addAction(update)
+        alertSheet.addAction(sort)
         alertSheet.addAction(UIAlertAction(title: "取消", style: .destructive, handler: nil))
         self.presentAlertSheet(alertSheet, animated: true)
     }

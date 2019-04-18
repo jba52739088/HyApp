@@ -1,24 +1,20 @@
 //
-//  ContactListCell.swift
+//  ImgWithTwoFieldCell.swift
 //  HyApp
 //
-//  Created by 黃恩祐 on 2019/2/11.
+//  Created by 黃恩祐 on 2019/4/18.
 //  Copyright © 2019年 ENYUHUANG. All rights reserved.
 //
 
 import UIKit
 
-class ContactListCell: UITableViewCell {
+class ImgWithTwoFieldCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var addrLabel: UILabel!
-    @IBOutlet weak var tel_1_Label: UILabel!
-    @IBOutlet weak var tel_2_Label: UILabel!
-    @IBOutlet weak var otherLabel: UILabel!
-    @IBOutlet weak var abbrLabel: UILabel!
-    @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-    
+    @IBOutlet weak var lbTitle_1: UILabel!
+    @IBOutlet weak var lbTitle_2: UILabel!
+    @IBOutlet weak var lbContent_1: UILabel!
+    @IBOutlet weak var lbContent_2: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,5 +26,5 @@ class ContactListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
